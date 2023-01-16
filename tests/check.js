@@ -9,8 +9,12 @@ echo "bd530b55-1d2e-480b-b924-fd91c358b0d3,MacDowall,Arnie,amacdowall83@Amazon.c
 
 echo "Example input:"
 cat input.txt
+mkdir logs 
+touch ./logs/file1.txt ./logs/file2.txt ./logs/file3.txt
 
-bash ./scripts/extract_names.sh input.txt output_names.txt
+bash ./scripts/backup_daily.sh ./logs
+
+ls -l ./backups
 
 echo "Output:"
 cat output_names.txt
