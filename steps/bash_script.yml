@@ -1,0 +1,55 @@
+id: bash_script
+learningObjectives: 
+- Writing bash scripts
+hints:
+- In order to allow someone else to use your script you would want to make it exectutable. You can find instructions here [link](https://www.andrewcbancroft.com/blog/musings/make-bash-script-executable/)
+- To get arguments in your bash script you can use the following [link](https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script)
+- It's always a good idea to make sure you don't have any redundant characters (including spaces or \n). 
+startFlow:
+  do:
+  - actionId: bot_message
+    params:
+      person: keen
+      messages:
+      - text: "So Luca spilled the beans about telling you that this is something we do all the time, and from what I understand, you're doing it using a script. Great. Would be nice to be able to save it in our repo so that others can do it too."
+        delay: 1300
+      - text: "Please create a new script under the scripts directory in the backend directory called `extract_names.sh` (and make sure you have the permission to run it)"
+        delay: 1300
+      - text: "The script should take in a file as an argument and print the result to a txt file. Open a PR when you're done."
+        delay: 1300
+trigger:
+  type: github_pr_lifecycle_status
+  flowNode:
+    switch:
+      key: ${eventType}
+      cases:
+        github_pr_opened:
+          do:      
+          - actionId: github_pr_comment
+            params:
+              person: keen
+              message: Lovely. Let me take a look.
+              
+        github_pr_workflow_complete_success:
+          do:
+          - actionId: github_pr_approve
+            params:
+              person: keen
+              message: Amazing, that will save us (meaning you) tons of work.
+              
+        github_pr_workflow_complete_failure:
+          do:
+          - actionId: github_pr_reject
+            params:
+              person: keen
+              message: "Umm, something is not quite right, please make sure your output is in the following format: `first name` `last name`."
+
+        github_pr_merged:
+          do:
+          - actionId: finish_step
+
+
+githubActions:
+  backend:
+    testFile: "check.js"
+    cmd: "bash ${testFile}"

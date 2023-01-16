@@ -1,0 +1,53 @@
+id: bash_filter
+learningObjectives: 
+- Recognise a correct file format that can be manipulated through bash. Read from a file and learn at least one bash command that can search it for a specific string or symbol
+hints:
+- Some file formats can not be manipulated through bash
+- If you are not sure how to use a command you can use the manual. Type 'man nameOfCommand' for example, man cat would open the manual for the cat command
+- You can use several commands together by utilizing the sign | (pipe)
+- Not sure everybody knows to spell their emails with lower case letters
+startFlow: 
+  do:
+  - actionId: bot_message
+    params:
+      person: keen
+      messages:
+      - text: "Hi ${user.firstName}. This is something I used to bug Carl with, but now that you're in his seat, I guess it's your job. Amazon employees are apparently snooping around, looking to steal our innovations.  Here's a [file](https://docs.google.com/spreadsheets/d/1fYT7vLFdgEbPKCNxJ0lY3esgEPSSkRhsajhNHf_rA4I) with today's sign ups, please tell me how many of them have an @amazon.com email."
+        delay: 1000
+  - actionId: bot_message
+    params:
+      person: lucca
+      messages:
+      - text: "Hi ${user.firstName}, just FYI, you're getting that mole finding job not because Carl had it but because everyone at Product got tired of doing it manually. We have mole hunts, like, every week. Comes with the popularity, I guess. My advice for you is to create some sort of a script, because it aint gonna be a one-time thing. From what I remember, bash can be very effective for these kinds of small tasks." 
+        delay: 1000
+trigger:
+  type: user_message
+  params: 
+    person: keen
+  flowNode:
+    if:
+      conditions:
+      - conditionId: text_contains_strings
+        params:
+          text: "${userMessageText}"
+          strings:
+          - "4"
+          - "Four"
+          - "four"
+      then:
+        do:
+        - actionId: bot_message
+          params:
+            person: keen
+            messages:
+            - text: "Thanks mate." 
+              delay: 1300
+        - actionId: finish_step
+      else:
+        do:
+        - actionId: bot_message
+          params:
+            person: keen
+            messages:
+            - text: "Are you sure? This doesn't make sense..."
+              delay: 2500

@@ -1,0 +1,15 @@
+id: bashing_it
+title: Bashing It
+description: Sometimes, the Product department comes to you with a monumental challenge only you can solve. Too often, though, what they need is something small — and inexplicably, they ask for it once every few days. You can do it manually every, of course, but that romance novel that’s your way out of the industry won’t write itself. Thankfully, there’s bash scripting.
+summary: Congratulations, you now know how to automate simple, repetitive tasks using a bash script. Hopefully, it'll save you a lot of time in the future.
+level: beginner
+steps:
+- bash_filter
+- bash_extract_names
+- bash_script
+duration: 0.5
+skills:
+- DevOps
+- Operations
+questDependency: docker_localsetup
+slogan: Everything Works If You Bash It Hard Enough
