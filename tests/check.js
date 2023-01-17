@@ -11,7 +11,7 @@ cat input.txt
 
 bash ./scripts/backup_daily.sh input.txt
 
-if tar xvzf backup.tar.gz  | grep -q "input.txt"; 
+if tar xvzf ./backups/backup.tar.gz  | grep -q "input.txt"; 
 then
     echo "looking good!"
     exit 0;
