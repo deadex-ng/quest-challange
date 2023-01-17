@@ -9,26 +9,14 @@ echo "bd530b55-1d2e-480b-b924-fd91c358b0d3,MacDowall,Arnie,amacdowall83@Amazon.c
 
 echo "Example input:"
 cat input.txt
-pwd
-mkdir logs 
-touch ./logs/file1.txt ./logs/file2.txt ./logs/file3.txt
 
-bash ./scripts/backup_daily.sh ./logs
+bash ./scripts/backup_daily.sh input.txt
 
-ls -l ./logs
-
-echo "Output:"
-cat output_names.txt
-
-if ! grep -q "Wilco Roger" output_names.txt; then
-  echo "didn't find Roger Wilco in the list";
-  exit 1;
+if tar xvzf backup.tar.gz  | grep -q "input.txt"; 
+then
+    echo "looking good!"
+    exit 0;
+else
+    echo "backup archive has no file"
+    exit 1;
 fi
-
-if [ `cat output_names.txt | wc -l` -ne "2" ]; then
-  echo "Should have found 2 users in the input";
-  exit 1;
-fi
-
-echo "looking good!"
-exit 0;
