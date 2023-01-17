@@ -1,16 +1,15 @@
 id: bash_extract_names
 learningObjectives: 
-- Manipulating strings and cutting out parts of a file
+- Reading through logs
 hints:
-- Make sure the first name comes before the last name, maybe there is a command to flip them?
-- It's easier to see the result when you et rid of the text you don't actually need
+- Check the logs for the users who accessed the system on June 16
 startFlow:
   do:
   - actionId: bot_message
     params:
       person: keen
       messages:
-      - text: "Ok, ok. Four spies is an escalation of hostilities. Can you get me their names? First name + last name, please!"
+      - text: "Mmmhh two users huh? What are the names of the users?"
         delay: 1500
 trigger:
   type: user_message
@@ -23,17 +22,15 @@ trigger:
         params:
           text: "${userMessageText}"
           strings:
-          - - "Brad Pertrew"
-            - "Amjad Halil"
-            - "Hatake Ken"
-            - "Elisabeth Perl"
+          - - "cyrus"
+            - "sean"
       then:
         do:
         - actionId: bot_message
           params:
             person: keen
             messages:
-            - text: "That's great, ${user.firstName}. We'll take it from here." 
+            - text: "That's great, ${user.firstName}. That's all I needed for now." 
               delay: 1300
         - actionId: finish_step
       else:
@@ -42,5 +39,5 @@ trigger:
           params:
             person: keen
             messages:
-            - text: "I don't recognize these from our counter-intelligence lists. Only first names and last names, please."
+            - text: "I don't recognize these."
               delay: 2500

@@ -4,19 +4,24 @@ learningObjectives:
 hints:
 - In order to allow someone else to use your script you would want to make it exectutable. You can find instructions here [link](https://www.andrewcbancroft.com/blog/musings/make-bash-script-executable/)
 - To get arguments in your bash script you can use the following [link](https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script)
-- It's always a good idea to make sure you don't have any redundant characters (including spaces or \n). 
+- To create archives using tar. You can find instructions here [link](https://linuxize.com/post/how-to-create-and-extract-archives-using-the-tar-command-in-linux/) 
 startFlow:
   do:
   - actionId: bot_message
     params:
       person: keen
       messages:
-      - text: "So Luca spilled the beans about telling you that this is something we do all the time, and from what I understand, you're doing it using a script. Great. Would be nice to be able to save it in our repo so that others can do it too."
+      - text: "One last thing, just quickly create a script to create log bckups. We might need this log in the future and the script will come in handy, more logs are coming."
         delay: 1300
-      - text: "Please create a new script under the scripts directory in the backend directory called `extract_names.sh` (and make sure you have the permission to run it)"
+      - text: "Please create a new script under the scripts directory in the backend directory called `backup.sh` (and make sure you have the permission to run it)"
         delay: 1300
-      - text: "The script should take in a file as an argument and print the result to a txt file. Open a PR when you're done."
+      - text: "The script should take in a file as an argument and generate an archive."
         delay: 1300
+      - text: "I remember Navi said he uses tar and gzip. He said it's the standard around here."
+        delay: 1300
+      - text: "Open a PR when you're done."
+        delay: 1300
+
 trigger:
   type: github_pr_lifecycle_status
   flowNode:
