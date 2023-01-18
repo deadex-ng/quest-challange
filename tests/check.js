@@ -9,7 +9,7 @@ echo "Jun 15 02:04:59 combo sshd(pam_unix)[20884]: authentication failure; logna
 
 cat input.txt
 
-bash ./scripts/backup_daily.sh input.txt
+bash ./scripts/backup.sh input.txt
 
 if tar xvzf backup.tar.gz  | grep -q "input.txt"; 
 then
