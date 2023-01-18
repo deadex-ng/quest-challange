@@ -15,7 +15,7 @@ startFlow:
         delay: 1300
       - text: "Please create a new script under the scripts directory in the backend directory called `backup.sh` (and make sure you have the permission to run it)"
         delay: 1300
-      - text: "The script should take in a file as an argument and generate an archive."
+      - text: "The script should take in a file as an argument and generate an archive in the root directory."
         delay: 1300
       - text: "I remember Navi said he uses tar and gzip. He said it's the standard around here."
         delay: 1300
