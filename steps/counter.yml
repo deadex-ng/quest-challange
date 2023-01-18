@@ -1,4 +1,4 @@
-id: bash_filter
+id: counter
 learningObjectives: 
 - Learn at least one bash command that can search for a specific string in a file
 hints:
