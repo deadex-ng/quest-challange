@@ -33,14 +33,18 @@ Before submitting your quest for review, test your quest in snack and check the 
  
 #### Step 2 [get_names]:
 - Learning Objective: Reading through logs
-- Narrative: The product team asks for their names
+- Narrative: The team manager asks for their names
 - Instructions: Read through the logs and check when a user's session started and ended.
 - How do users pass to the next step: The player sends the correct names to the team manager
 - Hints:
-
+    - Check the logs for the users who accessed the system on June 16
 
 #### Step 3 [bash_script]:
 - Learning Objective: Writing bash scripts
 - Narrative: The team manager asks the player to open a PR with the script for future use.
 - Instructions: Create a script that takes in a file as a argument and outputs a zipped archive of the file in the root directory.
+- Hints:
+    - In order to allow someone else to use your script you would want to make it exectutable. You can find instructions here [link](https://www.andrewcbancroft.com/blog/musings/make-bash-script-executable/)
+    - To get arguments in your bash script you can use the following [link](https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script)
+    - To create archives using tar. You can find instructions here [link](https://linuxize.com/post/how-to-create-and-extract-archives-using-the-tar-command-in-linux/) 
 
