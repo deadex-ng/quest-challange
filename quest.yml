@@ -1,4 +1,4 @@
-id: quest_challenge
+id: tar_trek
 title: Tar Trek
 description: Help investigate a security incident at our company. As a member of IT team, use tar command in script to extract, compress and backup system logs for analysis. Learn important archiving skills and assist in resolving the incident. Become a valuable asset to the team with Tar Trek
 summary: Congratulations, you now know how to create archives using tar in a bash script. Hopefully, it'll save you a lot of time in the future.
