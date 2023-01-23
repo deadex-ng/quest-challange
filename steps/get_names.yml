@@ -32,6 +32,14 @@ trigger:
             messages:
             - text: "That's great, ${user.firstName}. That's all I needed for now." 
               delay: 1300
+            - text: "Joe will take it from here." 
+        - actionId: finish_step
+        - actionId: bot_message
+          params:
+            person: lucca
+            messages:
+            - text: "Hey new guy! You're really good with this Bash thing"
+              delay: 1300
         - actionId: finish_step
       else:
         do:

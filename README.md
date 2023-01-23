@@ -26,7 +26,7 @@ Before submitting your quest for review, test your quest in snack and check the 
 #### Step 1 [counter]: 
 - Learning Objective: Learn at least one bash command that can search for a specific string in a file
 - Narrative: A team manager sends the player a snack message about an investigation on a breach in the system and asks how many users accessed the system on a particular date. At the same time, Lucca sends a snack message commenting as they talk.
-- Instructions: Download the file from a link (sent by product) and search for users who accessed the system at a particular date.Then send the number of users to the team mananger(as a snack message)
+- Instruction: Download the file from a link (sent by product) and search for users who accessed the system at a particular date.Then send the number of users to the team mananger(as a snack message)
 - How do users pass to the next step: The player sends the correct number to the team manager
 - Hints: Search for strings in file with Linux commands
 
@@ -34,7 +34,7 @@ Before submitting your quest for review, test your quest in snack and check the 
 #### Step 2 [get_names]:
 - Learning Objective: Reading through logs
 - Narrative: The team manager asks for their names
-- Instructions: Read through the logs and check when a user's session started and ended.
+- Instruction: Read through the logs and check when a user's session started and ended.
 - How do users pass to the next step: The player sends the correct names to the team manager
 - Hints:
     - Check the logs for the users who accessed the system on June 16
@@ -42,7 +42,7 @@ Before submitting your quest for review, test your quest in snack and check the 
 #### Step 3 [bash_script]:
 - Learning Objective: Writing bash scripts
 - Narrative: The team manager asks the player to open a PR with the script for future use.
-- Instructions: Create a script that takes in a file as a argument and outputs a zipped archive of the file in the root directory.
+- Instruction: Create a script that takes in a file as a argument and outputs a zipped archive of the file in the root directory.
 - Hints:
     - In order to allow someone else to use your script you would want to make it exectutable. You can find instructions here [link](https://www.andrewcbancroft.com/blog/musings/make-bash-script-executable/)
     - To get arguments in your bash script you can use the following [link](https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script)

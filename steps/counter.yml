@@ -7,9 +7,18 @@ startFlow:
   do:
   - actionId: bot_message
     params:
+      person: Navi
+      messages:
+      - text: "Hi ${user.firstName}. How are you finding your new role? Btw I'm on vacation and please don't send me any emails." 
+        delay: 1000
+      - text: "You don't have to reply to this message, I probaly won't see it."
+        delay: 1000
+      - text: "See ya!"
+  - actionId: bot_message
+    params:
       person: keen
       messages:
-      - text: "Hi ${user.firstName}. This was something that was supposed to be done ny Navi considering the nature of the investigation."
+      - text: "Hi ${user.firstName}. This was something that was supposed to be done by Navi considering the nature of the investigation."
         delay: 1000
       - text: "But you know how Navi gets when he is on vacation."
         delay: 1000
@@ -20,6 +29,10 @@ startFlow:
       - text: "![](https://media.giphy.com/media/CoDp6NnSmItoY/giphy.gif)" 
         delay: 1000
       - text: "He doesn't answer emails or calls"
+        delay: 1000
+      - text: "Btw welcome to the team new guy"
+        delay: 1000
+      -text: "Don't hesistate to reach out if you need help"
   - actionId: bot_message
     params:
       person: keen
