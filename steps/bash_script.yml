@@ -9,15 +9,19 @@ startFlow:
   do:
   - actionId: bot_message
     params:
-      person: keen
+      person: Joe
       messages:
-      - text: "One last thing, just quickly create a script to create log bckups. We might need this log in the future and the script will come in handy, more logs are coming."
+      - text: "Hi ${user.firstName}. I'm Joe, the Senior Dev. Sorry we have to meet like this."
+        delay: 1000
+      - text: "The investigation is still on going, so we need to keep the log. There might be more log files coming, we'll need to keep those too."
         delay: 1300
-      - text: "Please create a new script under the scripts directory in the backend directory called `backup.sh` (and make sure you have the permission to run it)"
+      - text: "Since more logs are coming, it's best to create a script that backups up the logs."
+        delay: 1300      
+      - text: "Could you please create a script that takes the log file as an argument and generates an archive called `backup.tar.gz` in the root directory."
         delay: 1300
-      - text: "The script should take in a file as an argument and generate an archive in the root directory."
+      - text: "Name the script,`backup.sh` and put it under the scripts directory in the backend directory."
         delay: 1300
-      - text: "I remember Navi said he uses tar and gzip. He said it's the standard around here."
+      - text: "Make sure the script is executable"
         delay: 1300
       - text: "Open a PR when you're done."
         delay: 1300
@@ -32,21 +36,21 @@ trigger:
           do:      
           - actionId: github_pr_comment
             params:
-              person: keen
+              person: Joe
               message: Lovely. Let me take a look.
               
         github_pr_workflow_complete_success:
           do:
           - actionId: github_pr_approve
             params:
-              person: keen
+              person: Joe
               message: Amazing, that will save us (meaning you) tons of work.
               
         github_pr_workflow_complete_failure:
           do:
           - actionId: github_pr_reject
             params:
-              person: keen
+              person: Joe
               message: "Umm, something is not quite right, please make sure your output is in the following format: `first name` `last name`."
 
         github_pr_merged:
