@@ -9,10 +9,8 @@ startFlow:
   do:
   - actionId: bot_message
     params:
-      person: ness
+      person: keen
       messages:
-      - text: "Hi ${user.firstName}. I'm Vanessa, R&D Team Leader. Sorry we have to meet like this."
-        delay: 1000
       - text: "The investigation is still on going, so we need to keep the log. There might be more log files coming, we'll need to keep those too."
         delay: 1300
       - text: "Since more logs are coming, it's best to create a script that backups up the logs."
@@ -36,21 +34,21 @@ trigger:
           do:      
           - actionId: github_pr_comment
             params:
-              person: ness
+              person: keen
               message: Lovely. Let me take a look.
               
         github_pr_workflow_complete_success:
           do:
           - actionId: github_pr_approve
             params:
-              person: ness
+              person: keen
               message: Amazing, that will save us (meaning you) tons of work.
               
         github_pr_workflow_complete_failure:
           do:
           - actionId: github_pr_reject
             params:
-              person: ness
+              person: keen
               message: "Umm, something is not quite right, please make sure your output is in the following format: `first name` `last name`."
 
         github_pr_merged:
