@@ -3,14 +3,15 @@ learningObjectives:
 - Reading through logs
 hints:
 - Check the logs for the users who accessed the system on June 16
-startFlow:
+startFlow: 
   do:
   - actionId: bot_message
     params:
       person: keen
       messages:
       - text: "Mmmhh two users huh? What are the names of the users?"
-        delay: 1500
+        delay: 1000
+
 trigger:
   type: user_message
   params: 
@@ -32,7 +33,7 @@ trigger:
             messages:
             - text: "That's great, ${user.firstName}. That's all I needed for now." 
               delay: 1300
-            - actionId: finish_step
+        - actionId: finish_step
       else:
         do:
         - actionId: bot_message
