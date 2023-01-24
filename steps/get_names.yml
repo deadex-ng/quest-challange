@@ -32,6 +32,7 @@ trigger:
             messages:
             - text: "That's great, ${user.firstName}. That's all I needed for now." 
               delay: 1300
+            - actionId: finish_step
         - actionId: bot_message
           params:
             person: lucca
