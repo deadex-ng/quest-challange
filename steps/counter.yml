@@ -19,11 +19,15 @@ startFlow:
       messages:
       - text: "![](https://media.giphy.com/media/CoDp6NnSmItoY/giphy.gif)" 
         delay: 1000
-      - text: "He doesn't answer emails or calls"
+      - text: "Yeah! Navi doesn't answer emails or calls on vacation"
         delay: 1000
-      - text: "Btw welcome to the team new guy"
+      - text: "Welcome to the team new guy"
         delay: 1000
-      -text: "Don't hesistate to reach out if you need help"
+      - text:  "Don't be nervous, we're all here to help. You can reach out to anyone, just not me!🤣"
+        delay: 1000
+      - text:  "Just kidding, new guy! I'm Navi by the way!"
+        delay: 1000
+      - text:  "Nice to meet you!"
   - actionId: bot_message
     params:
       person: keen
