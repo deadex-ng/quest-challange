@@ -11,7 +11,6 @@ startFlow:
     params:
       person: keen
       messages:
-        delay: 1000
       - text: "The investigation is still on going, so we need to keep the log. There might be more log files coming, we'll need to keep those too."
         delay: 1300
       - text: "Since more logs are coming, it's best to create a script that backups up the logs."
