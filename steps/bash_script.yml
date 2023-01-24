@@ -17,13 +17,13 @@ startFlow:
         delay: 1300
       - text: "Since more logs are coming, it's best to create a script that backups up the logs."
         delay: 1300      
-      - text: "Could you please create a script that takes the log file as an argument and generates an archive called `backup.tar.gz` in the root directory."
+      - text: :instruction[Could you please create a script that takes the log file as an argument and generates an archive called `backup.tar.gz` in the root directory.]
         delay: 1300
-      - text: "Name the script,`backup.sh` and put it under the scripts directory in the backend directory."
+      - text: :instruction[Name the script,`backup.sh` and put it under the scripts directory in the backend directory]
         delay: 1300
       - text: "Make sure the script is executable"
         delay: 1300
-      - text: "Open a PR when you're done."
+      - text: :instruction[Open a PR when you're done]
         delay: 1300
 
 trigger:
