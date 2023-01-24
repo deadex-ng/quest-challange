@@ -5,6 +5,7 @@ summary: Congratulations, you now know how to create archives using tar in a bas
 level: beginner
 steps:
 - counter
+- get_names
 - bash_script
 duration: 0.5
 skills:
