@@ -10,11 +10,18 @@ echo "Jun 15 02:04:59 combo sshd(pam_unix)[20884]: authentication failure; logna
 
 bash ./scripts/backup.sh Linux.log
 
-if tar xvzf backup.tar.gz  | grep -q "Linux.log"; 
+if ls -l | grep "backup.tar.gz"; 
 then
-    echo "Backup archive contains the correct file!"
-    exit 0;
+    echo "Test 1 Passed: backup.tar.gz has been successfuly created"
+
+    if tar xzf backup.tar.gz  | grep -q "Linux.log";
+    then
+        echo "Test 2 Passed: Backup archive contains the correct file!"
+        exit 0;
+    else
+        echo "Test 2 Failed: Backup archive does not contain the correct file!"
+    fi
 else
-    echo "Backup archive does not contain the correct file"
+    echo "Test 1 Failed: backup.tar.gz has not been created."
     exit 1;
 fi

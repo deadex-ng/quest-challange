@@ -31,7 +31,7 @@ trigger:
           params:
             person: keen
             messages:
-            - text: "That's great, ${user.firstName}. That's all I needed for now." 
+            - text: "That's great, ${user.firstName}. We're now one step closer to catching the bad guys." 
               delay: 1300
         - actionId: finish_step
       else:
@@ -40,5 +40,5 @@ trigger:
           params:
             person: keen
             messages:
-            - text: "I don't recognize these."
+            - text: "I don't that's correct. Please check again"
               delay: 2500
