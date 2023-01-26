@@ -13,25 +13,6 @@ startFlow:
         delay: 1000
       - text: "But you know how Navi gets when he is on vacation."
         delay: 1000
-  - actionId: bot_message
-    params:
-      person: lucca
-      messages:
-      - text: "![](https://media.giphy.com/media/CoDp6NnSmItoY/giphy.gif)" 
-        delay: 1000
-      - text: "Yeah! Navi doesn't answer emails or calls on vacation"
-        delay: 1000
-      - text: "Welcome to the team new guy"
-        delay: 1000
-      - text:  "Don't be nervous, we're all here to help. You can reach out to anyone, just not me!🤣"
-        delay: 1000
-      - text:  "Just kidding, new guy! I'm Navi by the way!"
-        delay: 1000
-      - text:  "Nice to meet you!"
-  - actionId: bot_message
-    params:
-      person: keen
-      messages:
       - text: "So I guess it's just you."
         delay: 1000
       - text: "Well, this is part of a bigger investigation. There's a hacker who we suspect got into our system. Here is the log [file](https://drive.google.com/file/d/165p52gmI8TR0Tl-v9c3IawVNRnYvERpt/view?usp=sharing)"
@@ -67,5 +48,5 @@ trigger:
           params:
             person: keen
             messages:
-            - text: "Are you sure? This doesn't make sense..."
+            - text: "Mmmhh Could you please check again."
               delay: 2500
