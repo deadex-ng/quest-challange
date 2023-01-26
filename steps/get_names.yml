@@ -40,5 +40,5 @@ trigger:
           params:
             person: keen
             messages:
-            - text: "I don't that's correct. Please check again"
+            - text: "I don't think that's correct. Please check again"
               delay: 2500
