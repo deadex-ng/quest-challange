@@ -48,3 +48,5 @@ Before submitting your quest for review, test your quest in snack and check the 
     - To get arguments in your bash script you can use the following [link](https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script)
     - To create archives using tar. You can find instructions here [link](https://linuxize.com/post/how-to-create-and-extract-archives-using-the-tar-command-in-linux/) 
 
+# Play Quest
+You can the quest [here](https://www.trywilco.com/quests/tar-trek)
